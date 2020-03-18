@@ -59,7 +59,6 @@ const projects = [
   }
 
    const init = () => {
-    // createProjectCards(availableProject);
     availableProject();
    }
 
