@@ -1,7 +1,7 @@
-/* eslint-disable max-len */
+import util from '../helpers/utils';
+import projects from '../helpers/data/bioData';
 import 'bootstrap';
-import '../styles/main.scss';
-
+import '../../Styles/main.scss';
 
 const createProjectCards = (array) => {
   let domString = '';
@@ -15,12 +15,12 @@ const createProjectCards = (array) => {
     domString += '<div class="card-footer bg-transparent border-success">Footer</div>';
     domString += '</div>';
   });
-  printToDom('projectsPage', domString);
+  util.printToDom('projectsPage', domString);
 };
 
 const availableProject = () => {
   const availableProjects = [];
-  projects.forEach((project) => {
+  projects.getProjects.forEach((project) => {
     if (project.available === true) {
       availableProjects.push(project);
       createProjectCards(availableProjects);
@@ -28,10 +28,6 @@ const availableProject = () => {
   });
 };
 
-
-const init = () => {
-  availableProject();
+export default {
+  availableProject,
 };
-
-
-init();
