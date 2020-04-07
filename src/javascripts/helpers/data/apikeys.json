@@ -1,0 +1,11 @@
+{
+  "firebaseConfig" : {
+    "apiKey": "AIzaSyBUhCnJDXftnZOmfOosL2mG_UWdK8XVhC4",
+    "authDomain": "fir-pintrest.firebaseapp.com",
+    "databaseURL": "https://fir-pintrest.firebaseio.com",
+    "projectId": "fir-pintrest",
+    "storageBucket": "fir-pintrest.appspot.com",
+    "messagingSenderId": "666354026377",
+    "appId": "1:666354026377:web:7388700fee906bb2410358"
+  }
+}
