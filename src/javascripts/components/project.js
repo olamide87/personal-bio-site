@@ -12,7 +12,9 @@ const createProjectCards = (array) => {
     domString += '<h5 class="card-title">Success card title</h5>';
     domString += '<p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>';
     domString += '</div>';
-    domString += '<div class="card-footer bg-transparent border-success">Footer</div>';
+    domString += `<p class="text-center">${project.technologiesUsed}</p>`;
+    domString += `<p class="text-center">${'URL: '}${project.url}</p>`;
+    domString += `<p class="text-center">${'Github: '}${project.githubUrl}</p>`;
     domString += '</div>';
   });
   util.printToDom('projectsPage', domString);
@@ -20,7 +22,8 @@ const createProjectCards = (array) => {
 
 const availableProject = () => {
   const availableProjects = [];
-  projects.getProjects.forEach((project) => {
+  console.error('projects', projects);
+  projects.getProjects().forEach((project) => {
     if (project.available === true) {
       availableProjects.push(project);
       createProjectCards(availableProjects);
